@@ -1,0 +1,22 @@
+{
+  "user": [
+    {
+      "id": "rafal",
+      "email": "test@gmail.com",
+      "password": "123",
+      "notes": [
+        {
+          "title": "Notatka",
+          "content": "Pierwsza",
+          "id": "fa00d136-f035-4526-a623-14e31c2e1857"
+        },
+        {
+          "title": "dad",
+          "content": "dadwa",
+          "id": "eb474acf-4533-4e04-8cb6-e097552d0905"
+        }
+      ]
+    }
+   
+  ]
+}
