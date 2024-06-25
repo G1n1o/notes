@@ -1,22 +1,44 @@
 {
   "user": [
     {
-      "id": "rafal",
+      "id": "rafcio",
       "email": "test@gmail.com",
-      "password": "123",
+      "password": "$2a$10$8h.UqkdFJjnB2MCtcx5fmuy0uB/zgZ/O0OA8L73RSz8IdLw8DjJZC",
       "notes": [
         {
-          "title": "Notatka",
-          "content": "Pierwsza",
-          "id": "fa00d136-f035-4526-a623-14e31c2e1857"
+          "title": "test",
+          "content": "notatka",
+          "id": "ed822cdd-d7ca-4a0c-8d70-1bea78b0060b"
         },
         {
-          "title": "dad",
-          "content": "dadwa",
-          "id": "eb474acf-4533-4e04-8cb6-e097552d0905"
+          "title": "druga",
+          "content": "notatka",
+          "id": "e552f545-0f4c-44df-99dc-73d7e662b38f"
         }
       ]
+    },
+    {
+      "id": "ala",
+      "email": "testuj@gmail.com",
+      "password": "$2a$10$B.iB5ZNypBvW3aNw5hviM.QUYqjTioRIGD9jvP1B.J9Bwts02aH/6",
+      "notes": [
+        {
+          "title": "notatka",
+          "content": "123\n",
+          "id": "7d248de0-1a06-4ba9-be31-cac3bfaffba5"
+        },
+        {
+          "title": "sdwa",
+          "content": "dad",
+          "id": "79cdc062-ad04-407e-a103-59482f853d73"
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "email": "123@123.pl",
+      "password": "$2a$10$lp5dgDl6uXCm59Z5DiPdqOIEU4EdkGLLOx1lZL.sKDtTdIAzuXxcK",
+      "notes": []
     }
-   
   ]
 }

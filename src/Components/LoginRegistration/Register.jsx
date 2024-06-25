@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FaUser, FaLock, FaEnvelope } from 'react-icons/fa'
 import { toast } from 'react-toastify'
+import bcrypt from 'bcryptjs'
 
 function Register() {
 	const [id, setId] = useState('')
 	const [password, setPassword] = useState('')
 	const [email, setEmail] = useState('')
 	const navigate = useNavigate()
+	const [isLoading, setIsLoading] = useState(false)
 
 	const IsValidate = () => {
 		let isproceed = true
@@ -36,37 +38,35 @@ function Register() {
 		return isproceed
 	}
 
-	const handleSubmit = e => {
+	const handleSubmit = async e => {
 		e.preventDefault()
 		if (IsValidate()) {
-			fetch('http://localhost:3333/user')
-			.then(res => res.json())
-			.then(users => {
-		
-				const existingUser = users.find(user => user.id === id);
+			setIsLoading(true)
+			try {
+				const response = await fetch('http://localhost:3333/user')
+				const users = await response.json()
+				const existingUser = users.find(user => user.id === id)
 				if (existingUser) {
-					toast.error('User with this username already exists. Please choose another username.');
+					toast.error('User with this username already exists. Please choose another username.')
 				} else {
-					const newUser = { id, email, password, notes: [] };
-					fetch('http://localhost:3333/user', {
+					// Hash the password
+					const hashedPassword = await bcrypt.hash(password, 10)
+					const newUser = { id, email, password: hashedPassword, notes: [] }
+					await fetch('http://localhost:3333/user', {
 						method: 'POST',
 						headers: {
 							'Content-Type': 'application/json',
 						},
 						body: JSON.stringify(newUser),
 					})
-						.then(() => {
-							toast.success('Registered successfully.');
-							navigate('/');
-						})
-						.catch(err => {
-							toast.error('Failed: ' + err.message);
-						});
+					toast.success('Registered successfully.')
+					navigate('/')
 				}
-			})
-			.catch(err => {
-				toast.error('Failed to fetch users: ' + err.message);
-			});
+			} catch (err) {
+				toast.error('Failed: ' + err.message)
+			} finally {
+				setIsLoading(false)
+			}
 		}
 	}
 
@@ -93,7 +93,10 @@ function Register() {
 						<FaLock className='icon' />
 					</div>
 
-					<button type='submit'>Register</button>
+					<button type='submit' disabled={isLoading}>
+						{isLoading ? 'Registering...' : 'Register'}
+					</button>
+
 
 					<div className='register-link'>
 						<p>

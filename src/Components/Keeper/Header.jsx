@@ -1,8 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 import HighlightIcon from '@mui/icons-material/Highlight'
 
 function Header() {
+	function handleLogout() {
+		sessionStorage.clear()
+	}
+
 	return (
 		<header>
 			<h1>
@@ -10,7 +14,9 @@ function Header() {
 				Keeper
 			</h1>
 			<div className='logout'>
-				<Link to={'/'}>Logout</Link>
+				<a href='/' onClick={handleLogout}>
+					Logout
+				</a>
 			</div>
 		</header>
 	)

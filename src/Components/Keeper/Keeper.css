@@ -20,6 +20,7 @@ header .logout {
 	right: 3%;
 	top: 50%;
 	translate: 0 -50%;
+	cursor: pointer;
 }
 
 header .logout a {

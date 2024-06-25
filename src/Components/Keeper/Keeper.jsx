@@ -12,22 +12,24 @@ function Keeper() {
 	const navigate = useNavigate()
 
 	const [notes, setNotes] = useState([])
-	const [username, setUsername] = useState('');
+	const [username, setUsername] = useState('')
+	const localhost = 'http://localhost:3333/user'
 
 	useEffect(() => {
-		const usernameFromSession = sessionStorage.getItem('username');
+		const usernameFromSession = sessionStorage.getItem('username')
 		if (!usernameFromSession) {
-		  navigate('/');
-		  return;
+			navigate('/')
+			return
 		}
-		setUsername(usernameFromSession);
+		setUsername(usernameFromSession)
 
-		fetch(`http://localhost:3333/user?username=${username}`)
+		fetch(`${localhost}?id=${username}`)
 			.then(res => res.json())
 			.then(resp => {
 				if (resp.length === 0) {
 					throw new Error('User not found')
 				}
+				console.log(resp[0].notes)
 				setNotes(resp[0].notes)
 			})
 			.catch(err => {
@@ -38,13 +40,13 @@ function Keeper() {
 	function addNote(newNote) {
 		newNote.id = uuidv4()
 
-		fetch(`http://localhost:3333/user?username=${username}`)
+		fetch(`${localhost}?id=${username}`)
 			.then(res => res.json())
 			.then(resp => {
 				const user = resp[0]
 				user.notes.push(newNote)
 
-				return fetch(`http://localhost:3333/user/${user.id}`, {
+				return fetch(`${localhost}/${user.id}`, {
 					method: 'PUT',
 					headers: {
 						'Content-Type': 'application/json',
@@ -66,14 +68,13 @@ function Keeper() {
 
 	async function deleteNote(id) {
 		try {
-	
-			const userResponse = await fetch(`http://localhost:3333/user?id=${username}`)
+			const userResponse = await fetch(`${localhost}?id=${username}`)
 			const users = await userResponse.json()
-	
+
 			const user = users[0]
 			user.notes = user.notes.filter(note => note.id !== id)
 
-			const updateResponse = await fetch(`http://localhost:3333/user/${user.id}`, {
+			const updateResponse = await fetch(`${localhost}/${user.id}`, {
 				method: 'PUT',
 				headers: {
 					'Content-Type': 'application/json',
