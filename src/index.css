@@ -12,7 +12,8 @@ body {
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
-  max-width: 100vw;
-  background-color: #000000;
-	background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+	max-width: 100vw;
+	background-image: url('./Components/Assets/img/movie-background-collage.jpg');
+	background-size: cover;
+	background-position: center;
 }

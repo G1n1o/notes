@@ -1,44 +1,26 @@
 {
   "user": [
     {
-      "id": "rafcio",
-      "email": "test@gmail.com",
-      "password": "$2a$10$8h.UqkdFJjnB2MCtcx5fmuy0uB/zgZ/O0OA8L73RSz8IdLw8DjJZC",
-      "notes": [
-        {
-          "title": "test",
-          "content": "notatka",
-          "id": "ed822cdd-d7ca-4a0c-8d70-1bea78b0060b"
-        },
-        {
-          "title": "druga",
-          "content": "notatka",
-          "id": "e552f545-0f4c-44df-99dc-73d7e662b38f"
-        }
-      ]
-    },
-    {
-      "id": "ala",
-      "email": "testuj@gmail.com",
-      "password": "$2a$10$B.iB5ZNypBvW3aNw5hviM.QUYqjTioRIGD9jvP1B.J9Bwts02aH/6",
-      "notes": [
-        {
-          "title": "notatka",
-          "content": "123\n",
-          "id": "7d248de0-1a06-4ba9-be31-cac3bfaffba5"
-        },
-        {
-          "title": "sdwa",
-          "content": "dad",
-          "id": "79cdc062-ad04-407e-a103-59482f853d73"
-        }
-      ]
-    },
-    {
       "id": "test",
       "email": "123@123.pl",
       "password": "$2a$10$lp5dgDl6uXCm59Z5DiPdqOIEU4EdkGLLOx1lZL.sKDtTdIAzuXxcK",
-      "notes": []
+      "notes": [
+        {
+          "title": "Seksmisja",
+          "content": "Ciemność, widzę ciemność, ciemność widzę.",
+          "id": "f4bfd3e7-f9b1-4e0a-846f-e701535bd618"
+        },
+        {
+          "title": "Kiler",
+          "content": "Memory, find… Siara. I wszystko jasne!",
+          "id": "6c3740b9-3fd3-4dcb-877a-c5188285dfbf"
+        },
+        {
+          "title": "Poranek kojota",
+          "content": "Jeżeli czegoś nie da się zrobić, potrzebny jest ktoś, kto o tym nie wie – przyjdzie i to zrobi",
+          "id": "6405b4d0-b6e7-45ba-ba50-e17078091083"
+        }
+      ]
     }
   ]
 }

@@ -41,7 +41,7 @@ function CreateArea(props) {
             name="title"
             onChange={handleChange}
             value={note.title}
-            placeholder="Title"
+            placeholder="Movie Title"
           />
         )}
 
@@ -50,7 +50,7 @@ function CreateArea(props) {
           onClick={expend}
           onChange={handleChange}
           value={note.content}
-          placeholder="Take a note..."
+          placeholder="Take a quote..."
           rows={isExpended ? 3 : 1}
         />
         <Zoom in={isExpended}>

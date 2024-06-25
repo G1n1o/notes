@@ -1,6 +1,6 @@
 import React from 'react'
 
-import HighlightIcon from '@mui/icons-material/Highlight'
+import LiveTvIcon from '@mui/icons-material/LiveTv';
 
 function Header() {
 	function handleLogout() {
@@ -10,8 +10,8 @@ function Header() {
 	return (
 		<header>
 			<h1>
-				<HighlightIcon />
-				Keeper
+				<LiveTvIcon />
+				Best Movie Quotes
 			</h1>
 			<div className='logout'>
 				<a href='/' onClick={handleLogout}>

@@ -29,7 +29,6 @@ function Keeper() {
 				if (resp.length === 0) {
 					throw new Error('User not found')
 				}
-				console.log(resp[0].notes)
 				setNotes(resp[0].notes)
 			})
 			.catch(err => {

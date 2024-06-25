@@ -12,7 +12,6 @@ function Login() {
 
 	useEffect(() => {
 		sessionStorage.clear()
-		console.log(sessionStorage);
 	}, [])
 
 	const proceedLogin = e => {

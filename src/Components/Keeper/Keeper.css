@@ -4,9 +4,13 @@ header {
 	left: 0;
 	height: 100px;
 	width: 100%;
-	background-color: #f5ba13;
+	background-color: #febe1f;
 	padding: 16px 32px;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+header h1 svg {
+	margin-right: 5px;
+	font-size: 19px;
 }
 
 header h1 {
@@ -24,6 +28,7 @@ header .logout {
 }
 
 header .logout a {
+	font-size: 20px;
 	color: white;
 	text-decoration: outline;
 }
