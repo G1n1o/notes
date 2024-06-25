@@ -14,42 +14,41 @@ function Login() {
 		sessionStorage.clear()
 	}, [])
 
-	const proceedLogin = e => {
+	const proceedLogin = async e => {
 		e.preventDefault()
 		if (validate()) {
-			fetch(localhost + username)
-				.then(res => {
-					if (!res.ok) {
-						if (res.status === 404) {
-							toast.error('User not found')
-						} else {
-							throw new Error('Unexpected response from server')
-						}
-					}
-					return res.json()
-				})
-				.then(resp => {
-					if (Object.keys(resp).length === 0) {
-						toast.error('Please Enter valid username')
+			try {
+				const response = await fetch(localhost + username)
+				if (!response.ok) {
+					if (response.status === 404) {
+						toast.error('User not found')
+						return
 					} else {
-						const hashedPassword = resp.password // Przyjmij, że serwer zwraca zahashowane hasło
-
-						bcrypt.compare(password, hashedPassword, (err, result) => {
-							if (err) {
-								toast.error('Login Failed due to an error.')
-							} else if (result) {
-								toast.success('Success')
-								sessionStorage.setItem('username', username)
-								usenavigate('/notes')
-							} else {
-								toast.error('Please Enter valid credentials')
-							}
-						})
+						throw new Error('Unexpected response from server')
 					}
-				})
-				.catch(err => {
-					toast.error('Login Failed due to :' + err.message)
-				})
+				}
+				const resp = await response.json()
+
+				if (Object.keys(resp).length === 0) {
+					toast.error('Please Enter valid username')
+				} else {
+					const hashedPassword = resp.password
+
+					bcrypt.compare(password, hashedPassword, (err, result) => {
+						if (err) {
+							toast.error('Login Failed due to an error.')
+						} else if (result) {
+							toast.success('Success')
+							sessionStorage.setItem('username', username)
+							usenavigate('/notes')
+						} else {
+							toast.error('Please Enter valid credentials')
+						}
+					})
+				}
+			} catch (err) {
+				toast.error('Login Failed due to: ' + err.message)
+			}
 		}
 	}
 

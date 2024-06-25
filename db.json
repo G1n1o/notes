@@ -21,6 +21,30 @@
           "id": "6405b4d0-b6e7-45ba-ba50-e17078091083"
         }
       ]
+    },
+    {
+      "id": "123",
+      "email": "123@gmail.com",
+      "password": "$2a$10$X9qhZXNIo.hT06GcQD7cP.sQihHTZVm31tCztgENp/z/Zpv40ofke",
+      "notes": [
+        {
+          "title": "q",
+          "content": "q",
+          "id": "6b992f54-2c29-469a-8900-7af5defafcd3"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "email": "2@dwa.pl",
+      "password": "$2a$10$9XkC6HhHh4xgJBHbgg2oiusv0K5Zcc5Gbs2oTRphSdKXcXZ0CJGq6",
+      "notes": []
+    },
+    {
+      "id": "3",
+      "email": "trzy@mail.pl",
+      "password": "$2a$10$GEejxJuG8XqzN1WarNCa/Oko9DUvcwtWYinmCyy2.a63pP7Xtf/Gm",
+      "notes": []
     }
   ]
 }

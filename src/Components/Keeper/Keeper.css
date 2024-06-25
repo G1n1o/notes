@@ -4,7 +4,7 @@ header {
 	left: 0;
 	height: 100px;
 	width: 100%;
-	background-color: #febe1f;
+	background-color: rgb(30, 30, 30);
 	padding: 16px 32px;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
