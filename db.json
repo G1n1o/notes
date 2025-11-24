@@ -16,34 +16,22 @@
           "id": "6c3740b9-3fd3-4dcb-877a-c5188285dfbf"
         },
         {
-          "title": "Poranek kojota",
+          "title": "Poranek Kojota",
           "content": "Jeżeli czegoś nie da się zrobić, potrzebny jest ktoś, kto o tym nie wie – przyjdzie i to zrobi",
-          "id": "6405b4d0-b6e7-45ba-ba50-e17078091083"
+          "id": "e40d94ec-b9bd-415f-b0e2-fc93dbfc78b9"
         }
       ]
     },
     {
-      "id": "123",
-      "email": "123@gmail.com",
-      "password": "$2a$10$X9qhZXNIo.hT06GcQD7cP.sQihHTZVm31tCztgENp/z/Zpv40ofke",
-      "notes": [
-        {
-          "title": "q",
-          "content": "q",
-          "id": "6b992f54-2c29-469a-8900-7af5defafcd3"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "email": "2@dwa.pl",
-      "password": "$2a$10$9XkC6HhHh4xgJBHbgg2oiusv0K5Zcc5Gbs2oTRphSdKXcXZ0CJGq6",
+      "id": "rafal",
+      "email": "przyklad@gmail.com",
+      "password": "$2a$10$MyImv410U2L9bR4iqaUih..f8SqlnoAIc3MiQJtZ.j0L.5uqalwci",
       "notes": []
     },
     {
-      "id": "3",
-      "email": "trzy@mail.pl",
-      "password": "$2a$10$GEejxJuG8XqzN1WarNCa/Oko9DUvcwtWYinmCyy2.a63pP7Xtf/Gm",
+      "id": "rafcio",
+      "email": "123@123.pl",
+      "password": "$2a$10$FOfqp1e5floogIcbbrOXA.6v9VV8fiPzlqQMHpZFot3kFsLhLNjw2",
       "notes": []
     }
   ]
