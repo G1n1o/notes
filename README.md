@@ -1,14 +1,29 @@
 # Best Movie Quotes
 
 
-Aplikacja do zapisywania ulubionych cytatów z filmów i seriali.
+An application for saving favorite quotes from movies and TV series
 
-Aplikacja stworzona przy użyciu freamworku React i oparta na REST API do zapisywania i odczytywania danych z pliku. Best Movie Quotes posiada ekran logowania oraz rejestracji, co umożliwia użytkownikom tworzenie spersonalizowanych list cytatów lub recenzji/ocen filmów. Zachęcam do obejrzenia filmu prezentującego funkcje aplikacji.
-
-## Wykorzystane technologie
+## Technologies Used
 **React, JavaScript, JSON Server**
+
+
+Best Movie Quotes is a web application built with the React framework. It uses a REST API to store and retrieve data from a file-based backend, allowing users to save their favorite quotes, reviews, and ratings.
+
+ <br>
+
+<img src="images/Best.png" width="600"/> <br>
+
+
+The application includes both login and registration screens, enabling each user to maintain a personalized library of movie quotes or short movie reviews.
+The clean UI and fast interactions make it easy to manage and browse saved content.
+
+<img src="images/register.png" width="600"/> <br>
+
+
 
 <br>
 
-![Opis obrazka](bestMovieQuotes.gif)
+After logging in, the user is taken to the main screen, where they can add new quotes by providing the quote text, the movie or series title, and an optional rating or comment:
+
+<img src="images/new.png" width="600"/>
 
